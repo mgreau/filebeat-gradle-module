@@ -1,0 +1,13 @@
+module_version: 1.0
+
+var:
+  - name: paths
+    default:
+      - /srv/gradle*.log
+    os.darwin:
+      - /usr/local/example/gradle*.log
+    os.windows:
+      - c:/programdata/example/logs/gradle*.log
+
+ingest_pipeline: ingest/pipeline.json
+prospector: config/task.yml

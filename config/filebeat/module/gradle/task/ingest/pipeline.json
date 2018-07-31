@@ -1,0 +1,38 @@
+{
+  "description": "Pipeline for parsing Release Manager logs",
+  "processors": [{
+    "grok": {
+      "field": "message",
+      "patterns": [ "\\[.*?%{TIMESTAMP_ISO8601:start}\\]\\[rm-task-started\\].*?%{WORD:task.name}\\n%{GREEDYMULTILINE:task.output}\\n\\[.*?%{TIMESTAMP_ISO8601:stop}\\]\\[rm-task-finished\\]" ],
+      "pattern_definitions" : {
+        "GREEDYMULTILINE" : "(.|\n)*",
+      "ignore_missing": true
+      }
+    }
+  }, 
+  {
+    "date": {
+      "field": "start",
+      "target_field": "task.start",
+      "formats": [ "yyyy-MM-dd HH:mm:ss.SSS'Z'" ]
+    }
+  },
+  {
+    "date": {
+     "field": "stop",
+     "target_field": "task.stop",
+     "formats": [ "yyyy-MM-dd HH:mm:ss.SSS'Z'" ]
+   }
+ },
+  {
+    "remove":{
+      "field": "message"
+    }
+  }],
+  "on_failure" : [{
+    "set" : {
+      "field" : "error.message",
+      "value" : "{{ _ingest.on_failure_message }}"
+    }
+  }]
+}

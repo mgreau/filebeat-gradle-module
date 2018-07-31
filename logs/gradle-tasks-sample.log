@@ -1,0 +1,27 @@
+:checkCIJobs (Thread[Task worker for ':',5,main]) started.
+
+> Task :checkCIJobs
+[2018-07-19 12:56:12.908Z][rm-task-started]checkCIJobs
+Task ':checkCIJobs' is not up-to-date because:
+  Executed with '--rerun-tasks'.
+----------------------
+Check CI Jobs report
+----------------------
+✔ elastic+apm-server+master+multijob-intake (sha:7e89c9c6c66f9d30bbc61d4bf61c4c0bd3584614): SUCCESS | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-intake/186/ | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-intake/186/console | multijob-intake | elastic/apm-server#master |
+✔ elastic+apm-server+master+multijob-linux/beat=apm-server,label=linux (sha:7e89c9c6c66f9d30bbc61d4bf61c4c0bd3584614): SUCCESS | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-linux/beat=apm-server,label=linux/183/ | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-linux/beat=apm-server,label=linux/183/console | multijob-linux/beat=apm-server,label=linux | elastic/apm-server#master |
+✔ elastic+apm-server+master+multijob-windows/beat=apm-server,label=windows (sha:7e89c9c6c66f9d30bbc61d4bf61c4c0bd3584614): SUCCESS | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-windows/beat=apm-server,label=windows/183/ | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-windows/beat=apm-server,label=windows/183/console | multijob-windows/beat=apm-server,label=windows | elastic/apm-server#master |
+✔ elastic+apm-server+master+multijob-docs (sha:7e89c9c6c66f9d30bbc61d4bf61c4c0bd3584614): SUCCESS | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-docs/183/ | https://apm-ci.elastic.co/job/elastic+apm-server+master+multijob-docs/183/console | multijob-docs | elastic/apm-server#master |
+✔ elastic+apm-server+master+package (sha:7e89c9c6c66f9d30bbc61d4bf61c4c0bd3584614): SUCCESS | https://apm-ci.elastic.co/job/elastic+apm-server+master+package/176/ | https://apm-ci.elastic.co/job/elastic+apm-server+master+package/176/console | package | elastic/apm-server#master |
+
+[2018-07-19 12:56:14.591Z][rm-task-finished]checkCIJobs
+:checkCIJobs (Thread[Task worker for ':',5,main]) finished. Took 1.686 secs.
+:checks (Thread[Task worker for ':',5,main]) started.
+
+> Task :checks
+[2018-07-19 12:56:14.593Z][rm-task-started]checks
+Skipping task ':checks' as it has no actions.
+[2018-07-19 12:56:14.593Z][rm-task-finished]checks
+:checks (Thread[Task worker for ':',5,main]) finished. Took 0.001 secs.
+[2018-07-19 12:56:14.596Z][rm-build-stopped] build finished
+1 actionable task: 1 executed
+Stopped 1 worker daemon(s).

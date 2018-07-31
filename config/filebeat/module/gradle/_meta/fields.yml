@@ -1,0 +1,9 @@
+- key: gradle
+  title: "gradle"
+  description: >
+    gradle Module
+  fields:
+    - name: gradle
+      type: group
+      description: >
+      fields:

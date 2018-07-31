@@ -1,0 +1,27 @@
+- name: task
+  type: group
+  description: >
+    Contains fields from the Release Manager logs.
+  fields:
+    - name: name
+      type: keyword
+      description: >
+        The task executed.
+    - name: start
+      type: date
+      example: "[2018-07-19 12:56:14.593Z]"
+      description:
+        Time when the task starts.
+    - name: stop
+      type: date
+      example: "[2018-07-19 12:56:14.593Z]"
+      description:
+        Time when the task finished.
+    - name: build_id
+      type: string
+      description: >
+        The Build ID of the entire build.
+    - name: output
+      type: text
+      description: >
+        The task output.

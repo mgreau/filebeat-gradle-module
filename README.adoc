@@ -1,0 +1,7 @@
+= Filebeat Gradle RM module
+
+docker build -t  docker.elastic.co/mgreau/filebeat:6.3.0 .
+
+docker-compose up -d
+
+EqxwVsx80DJUoy2MeNkBdQ==

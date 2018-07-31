@@ -1,0 +1,46 @@
+:modulename: gradle
+
+== gradle module
+
+This is the gradle module.
+
+include::../include/what-happens.asciidoc[]
+
+[float]
+=== Compatibility
+
+TODO: document with what versions of the software is this tested
+
+
+include::../include/running-modules.asciidoc[]
+
+[float]
+=== Example dashboard
+
+This module comes with a sample dashboard. For example:
+
+TODO: include an image of a sample dashboard
+
+include::../include/configuring-intro.asciidoc[]
+
+TODO: provide an example configuration
+
+:fileset_ex: {fileset}
+
+include::../include/config-option-intro.asciidoc[]
+
+TODO: document the variables from each fileset. If you're describing a variable
+that's common to other modules, you can reuse shared descriptions by including
+the relevant file. For example:
+
+[float]
+==== `{fileset}` log fileset settings
+
+include::../include/var-paths.asciidoc[]
+
+
+Execute pipeline
+----
+./execute_pipeline --elasticsearch http://elastic:changeme@localhost:9200 --multiline.pattern ':(.)*(started.)' --maxbytes 10010485760 --multiline.negate=true --multiline.mode "after" \
+--pipeline "../../module/gradle/task/ingest/pipeline.json" --logfile "../../module/gradle/task/test/gradle-one-task.log" --verbose --simulate.verbose
+----
